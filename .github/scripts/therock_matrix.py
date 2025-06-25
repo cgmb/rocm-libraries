@@ -4,7 +4,8 @@ This dictionary is used to map specific file directory changes to the correspond
 subtree_to_project_map = {
     "projects/rocprim": "prim",
     "projects/rocthrust": "prim",
-    "projects/hipcub": "prim"
+    "projects/hipcub": "prim",
+    "projects/hipblaslt": "blas"
 }
 
 project_map = {
@@ -12,5 +13,10 @@ project_map = {
         "cmake_options": "-DTHEROCK_ENABLE_PRIM=ON -DTHEROCK_ENABLE_ALL=OFF",
         "project_to_test": "test_rocprim, test_rocthrust, test_hipcub",
         "subtree_checkout": "projects/rocprim\nprojects/hipcub\nprojects/rocthrust",
+    },
+    "blas": {
+        "cmake_options": "-DTHEROCK_ENABLE_BLAS=ON -DTHEROCK_ENABLE_ALL=OFF",
+        "project_to_test": "test_hipblaslt",
+        "subtree_checkout": "projects/hipblaslt",
     },
 }
