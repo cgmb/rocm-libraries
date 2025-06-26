@@ -70,7 +70,7 @@ jobs:
       
       - name: Fetch sources
         run: |
-          ./TheRock/build_tools/fetch_sources.py --jobs 12 --no-include-math-libs
+          ./TheRock/build_tools/fetch_sources.py --jobs 12 --math-lib-projects mxDataGenerator
 
       - name: Install python deps
         run: |
